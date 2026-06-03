@@ -1,23 +1,205 @@
-.tab-item{
-    text-align: center;
-    color: var(--color-primary-700)#fff;
+.nav-list {
+    display: flex;
 }
 
-.tab-item.active, .tab-item:hover{
+.nav-item.active,
+.nav-item:hover {
     background-color: var(--color-primary-900);
     color: var(--color-neutral-0);
 }
 
-.tab-link{
-    display: block;
-    padding: 12px 0;
+.nav-link {
+    text-align: center;
 }
 
-.card-content{
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin: auto 0;
-    flex: 1;
-    color: var(--color-neutral-700);
+
+@media (max-width: 992px) {
+    .nav-list {
+        display: none;
+    }
+
+    .nav-list.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        top: 60px;
+        left: 0;
+        background-color: var(--color-primary-50);
+        gap: 12px;
+        padding: 12px 0px;
+    }
+
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    body.menu-open .mask {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-dark-60a);
+        z-index: 998;
+    }
+}
+
+.hero {
+    height: calc(100vh - 64px);
+    /* 桌機版扣除導覽列高度後，讓 hero 填滿剩餘螢幕高度 */
+    overflow: hidden;
+    /* 隱藏超出 hero 高度範圍的內容 */
+}
+
+/* 以下均為裝飾物定位 */
+
+.decorate-1 {
+    position: absolute;
+    top: 97px;
+    left: -81px;
+}
+
+.decorate-2 {
+    position: absolute;
+    bottom: 87px;
+    right: -80px;
+}
+
+.decorate-3 {
+    position: absolute;
+
+    &.flower-left-bottom {
+        width: 80px;
+        height: 80px;
+        bottom: 192px;
+        left: 391px;
+    }
+
+    &.flower-left-top {
+        top: 56px;
+        left: -226px;
+    }
+
+    &.flower-right-center {
+        top: 206px;
+        right: -170px;
+    }
+}
+
+.decorate-4 {
+    position: absolute;
+    top: 120px;
+    left: -87px;
+}
+
+.decorate-5 {
+    position: absolute;
+    left: 211px;
+    bottom: 83.53px;
+}
+
+.decorate-6 {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .decorate-6 {
+        position: absolute;
+        display: block;
+        top: 398.41px;
+        left: 134.5px;
+    }
+}
+
+.card-list .card {
+    min-width: 306px;
+}
+
+@media (max-width: 992px) {
+    .card-list .card {
+        min-width: 260px;
+    }
+}
+
+/* Projects 區塊樣式 */
+
+.project-card {
+    &:nth-of-type(1) {
+        background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/project_1.png?raw=true");
+    }
+
+    &:nth-of-type(2) {
+        background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/project_2.png?raw=true");
+    }
+
+    &:nth-of-type(3) {
+        background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/project_3.png?raw=true");
+    }
+}
+
+.project-content {
+    max-width: 386px;
+}
+
+@media (max-width: 992px) {
+    .project-card {
+        padding-top: 280px;
+
+        &:nth-of-type(1) {
+            background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/mobile/project_1.png?raw=true");
+        }
+
+        &:nth-of-type(2) {
+            background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/mobile/project_2.png?raw=true");
+        }
+
+        &:nth-of-type(3) {
+            background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/mobile/project_3.png?raw=true");
+        }
+    }
+
+    .project-content {
+        max-width: none;
+    }
+}
+
+.article-list .article {
+    min-width: 416px;
+}
+
+@media (max-width: 992px) {
+    .card-list .card {
+        min-width: 260px;
+    }
+}
+
+.subscriptions {
+    position: relative;
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/subscription_bg.png?raw=true);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.subscriptions::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-dark-60a);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.contact-input-half {
+    --gap: 24px;
+    width: calc((100% - var(--gap)) / 2);
+}
+
+@media (max-width: 992px) {
+    .contact-input-half {
+        width: 100%;
+    }
 }
