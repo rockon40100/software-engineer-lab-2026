@@ -230,6 +230,10 @@ a {
   justify-content: center;
 }
 
+.justify-content-end {
+  justify-content: end;
+}
+
 .gap-8 {
   gap: 8px;
 }
@@ -260,6 +264,10 @@ a {
 
 .min-w-0 {
   min-width: 0;
+}
+
+.min-w-content {
+  min-width: max-content;
 }
 
 .min-h-0 {
@@ -306,6 +314,10 @@ a {
   margin-bottom: 60px;
 }
 
+.mb-80 {
+  margin-bottom: 80px;
+}
+
 .mb-92 {
   margin-bottom: 92px;
 }
@@ -331,6 +343,11 @@ a {
   padding-right: 12px;
 }
 
+.px-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .px-24 {
   padding-left: 24px;
   padding-right: 24px;
@@ -349,6 +366,11 @@ a {
 .py-4 {
   padding-top: 4px;
   padding-bottom: 4px;
+}
+
+.py-8 {
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .py-12 {
@@ -551,6 +573,10 @@ a {
     display: block;
   }
 
+  .d-md-flex {
+    display: flex;
+  }
+
   .flex-md-col {
     flex-direction: column;
   }
@@ -632,8 +658,23 @@ a {
     margin-right: -12px;
   }
 
+  .mx-md-12 {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
   .pb-md-16 {
     padding-bottom: 16px;
+  }
+
+  .px-md-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .px-md-12 {
+    padding-left: 12px;
+    padding-right: 12px;
   }
 
   .px-md-16 {
